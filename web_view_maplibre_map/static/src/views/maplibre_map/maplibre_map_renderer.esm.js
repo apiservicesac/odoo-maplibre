@@ -17,6 +17,11 @@ const SOURCE = "records";
 const LAYER_CLUSTERS = "records-clusters";
 const LAYER_COUNT = "records-cluster-count";
 const LAYER_POINTS = "records-points";
+// Whole world, without the polar caps.
+const WORLD_BOUNDS = [
+    [-180, -60],
+    [180, 80],
+];
 
 function hasWebGL() {
     try {
@@ -161,7 +166,7 @@ export class MapRenderer extends Component {
         this.map.on("error", (ev) => console.warn("MapLibre:", ev.error));
         this.map.on("load", () => {
             this.addLayers();
-            this.updateData(true);
+            this.updateData();
         });
     }
 
@@ -257,15 +262,21 @@ export class MapRenderer extends Component {
             .addTo(this.map);
     }
 
-    updateData(fit = false) {
+    /**
+     * Refresh the data and the viewport: fit the records when there are some,
+     * otherwise show the whole world (default view).
+     */
+    updateData() {
         const source = this.map?.getSource(SOURCE);
         if (!source) return;
         const data = this.toGeoJSON();
         source.setData(data);
-        if (fit && data.features.length) {
+        if (data.features.length) {
             const bounds = new maplibregl.LngLatBounds();
             for (const f of data.features) bounds.extend(f.geometry.coordinates);
             this.map.fitBounds(bounds, {padding: 60, maxZoom: 15, duration: 0});
+        } else {
+            this.map.fitBounds(WORLD_BOUNDS, {padding: 0, duration: 0});
         }
     }
 
