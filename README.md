@@ -1,13 +1,31 @@
 # odoo-maplibre
 
 Odoo 19.0 modules that bring **MapLibre GL JS** (WebGL, vector tiles) to the web client.
-Maintained by API SERVICE SAC.
+Maintained by API SERVICE S.A.C.
 
 | Module | Description |
 |---|---|
 | `web_maplibre_lib` | Bundles MapLibre GL JS 5.9.0 + PMTiles protocol, and the style configuration. |
 | `web_view_maplibre_map_partner` | MapLibre map view in Contacts. |
 | `web_view_maplibre_map` | New `maplibre_map` view: GeoJSON clustering, popups, search/filter integration. |
+
+## Screenshots
+
+Contacts on the map, fitted to the markers, with clusters:
+
+![Contacts on the map](web_view_maplibre_map_partner/static/description/maplibre_map_partners.png)
+
+Zoom on a city:
+
+![Zoom on Lima](web_view_maplibre_map_partner/static/description/maplibre_map_zoom.png)
+
+Tilted map with 3D buildings when the view is close enough:
+
+![3D buildings](web_view_maplibre_map_partner/static/description/maplibre_map_3d.png)
+
+A click on a marker shows a popup that opens the record:
+
+![Popup of a partner](web_view_maplibre_map_partner/static/description/maplibre_map_popup.png)
 
 ## Usage
 
@@ -31,7 +49,7 @@ Maintained by API SERVICE SAC.
 ```
 
 Then add `maplibre_map` to the `view_mode` of the action. Optional attributes:
-`default_zoom` (7), `max_zoom` (19), `limit` (5000 records).
+`default_zoom` (7), `max_zoom` (19), `pitch` (45, map tilt in degrees), `limit` (5000 records).
 
 ## Map sources
 
@@ -50,6 +68,10 @@ MapLibre GL requires WebGL. Without it the view shows a message; use the Leaflet
 - Python tests pass on Odoo 19.0 (install + unit tests).
 - The map renders in Odoo 19 (manually verified). Without records with coordinates it shows the whole world; otherwise it fits the records.
 - Roadmap: marker images, partner integration (`web_view_maplibre_map_partner`), routing (OSRM/Valhalla), polygon layers, Odoo 20.0 port.
+
+## Credits
+
+The module icons are the official MapLibre app icon (© MapLibre contributors).
 
 ## License
 

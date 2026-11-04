@@ -1,0 +1,4 @@
+- Use an image field of the record as the marker icon.
+- Routing between records (OSRM or Valhalla).
+- Polygon and heatmap layers.
+- Port to 20.0.

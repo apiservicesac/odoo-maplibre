@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo noupdate="1">
     <!-- Any MapLibre style.json URL. Default: OpenFreeMap (OSM data, no API key). -->
     <record

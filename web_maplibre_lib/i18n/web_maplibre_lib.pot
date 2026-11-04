@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_maplibre_lib
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 05:44+0000\n"
+"PO-Revision-Date: 2026-11-04 05:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_maplibre_lib
+#: model:ir.model.fields,field_description:web_maplibre_lib.field_ir_http__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: web_maplibre_lib
+#: model:ir.model,name:web_maplibre_lib.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: web_maplibre_lib
+#: model:ir.model.fields,field_description:web_maplibre_lib.field_ir_http__id
+msgid "ID"
+msgstr ""

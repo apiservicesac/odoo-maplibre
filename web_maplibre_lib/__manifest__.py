@@ -1,13 +1,27 @@
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
 {
     "name": "MapLibre GL Javascript Library",
-    "summary": "Bring MapLibre GL JS (vector tiles, WebGL) and PMTiles in Odoo.",
     "version": "19.0.1.0.0",
-    "author": "API SERVICE SAC",
-    "website": "https://github.com/apiservicesac/odoo-maplibre",
+    "category": "API SERVICE SAC/MAPLIBRE",
+    "summary": "MapLibre GL JS (vector tiles, WebGL) and PMTiles in the Odoo backend",
+    "description": """
+MapLibre GL Javascript Library
+==============================
+
+Bundles MapLibre GL JS 5.9.0 and the PMTiles protocol in the Odoo backend and
+stores the map style configuration used by the MapLibre view modules.
+
+Content:
+--------
+- MapLibre GL JS and PMTiles loaded in the backend assets (no CDN).
+- System parameter `maplibre.style_url`: any MapLibre style.json. The default
+  is OpenFreeMap (OpenStreetMap data, no API key).
+- System parameter `maplibre.api_key`: optional key, replaces the `{key}`
+  placeholder of the style URL (MapTiler, Stadia, ...).
+- Self-hosted vector tiles with `pmtiles://` sources.
+    """,
+    "author": "API SERVICE S.A.C.",
+    "website": "https://www.apiservicesac.com",
     "license": "AGPL-3",
-    "category": "Extra Tools",
     "depends": ["base"],
     "data": ["data/ir_config_parameter.xml"],
     "assets": {
@@ -19,4 +33,6 @@
         ],
     },
     "installable": True,
+    "auto_install": False,
+    "application": False,
 }

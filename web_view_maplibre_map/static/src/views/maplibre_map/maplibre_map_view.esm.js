@@ -1,12 +1,7 @@
 import {MapController} from "./maplibre_map_controller.esm";
 import {MapRenderer} from "./maplibre_map_renderer.esm";
+import {MaplibreMapArchParser} from "./maplibre_map_arch_parser.esm";
 import {registry} from "@web/core/registry";
-
-function normalizeArch(arch) {
-    if (arch && typeof arch !== "string") return arch;
-    const doc = new DOMParser().parseFromString(String(arch || ""), "text/xml");
-    return doc.documentElement;
-}
 
 export const maplibreMapView = {
     type: "maplibre_map",
@@ -20,10 +15,7 @@ export const maplibreMapView = {
     props: (genericProps) => ({
         ...genericProps,
         Renderer: MapRenderer,
-        archInfo: {
-            ...genericProps.archInfo,
-            arch: normalizeArch(genericProps.arch),
-        },
+        archInfo: new MaplibreMapArchParser().parse(genericProps.arch),
     }),
 };
 

@@ -1,6 +1,3 @@
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
-
 def uninstall_hook(env):
     env.cr.execute(
         "UPDATE ir_act_window "

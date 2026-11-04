@@ -1,1 +1,1 @@
-- Contributors: API SERVICE SAC
+- API SERVICE S.A.C. (<https://www.apiservicesac.com>)

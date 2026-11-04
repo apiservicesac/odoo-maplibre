@@ -1,13 +1,27 @@
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
 {
     "name": "MapLibre Map View (vector tiles)",
-    "summary": "Add a 'maplibre_map' view: WebGL map with vector tiles and clustering.",
     "version": "19.0.1.0.0",
-    "author": "API SERVICE SAC",
-    "website": "https://github.com/apiservicesac/odoo-maplibre",
+    "category": "API SERVICE SAC/MAPLIBRE",
+    "summary": "'maplibre_map' view: tilted WebGL map with vector tiles",
+    "description": """
+MapLibre Map View (vector tiles)
+================================
+
+Adds the `maplibre_map` view type. Records with GPS coordinates are displayed
+on a WebGL map with vector tiles.
+
+Content:
+--------
+- Clusters of nearby records, click on a cluster to zoom into it.
+- Popup with the title and the address, linked to the record form.
+- Tilted map (`pitch` attribute) with 3D buildings when the view is close.
+- Integration with the search bar and the filters.
+- The whole world is displayed when no record has coordinates.
+- Map source configurable, see `web_maplibre_lib`.
+    """,
+    "author": "API SERVICE S.A.C.",
+    "website": "https://www.apiservicesac.com",
     "license": "AGPL-3",
-    "category": "Extra Tools",
     "depends": ["base_geolocalize", "web_maplibre_lib"],
     "assets": {
         "web.assets_backend": [
@@ -15,5 +29,7 @@
         ],
     },
     "installable": True,
+    "auto_install": False,
+    "application": False,
     "uninstall_hook": "uninstall_hook",
 }

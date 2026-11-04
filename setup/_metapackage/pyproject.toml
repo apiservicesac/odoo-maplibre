@@ -1,0 +1,13 @@
+[project]
+name = "odoo-addons-apiservicesac-odoo-maplibre"
+version = "19.0.20261104.0"
+dependencies = [
+    "odoo-addon-web_maplibre_lib==19.0.*",
+    "odoo-addon-web_view_maplibre_map==19.0.*",
+    "odoo-addon-web_view_maplibre_map_partner==19.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 19.0",
+]

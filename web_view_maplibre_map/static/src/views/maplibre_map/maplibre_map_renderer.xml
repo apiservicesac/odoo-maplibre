@@ -5,10 +5,10 @@
         <div class="o_maplibre_main_container h-100">
             <div t-ref="mapContainer" class="o_maplibre_map_container h-100" />
             <div
-                t-if="state.error"
+                t-if="state.errorMessage"
                 class="o_maplibre_error alert alert-warning m-3"
                 role="alert"
-                t-out="state.error"
+                t-out="state.errorMessage"
             />
         </div>
     </t>
