@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo noupdate="1">
+    <!-- Any MapLibre style.json URL. Default: OpenFreeMap (OSM data, no API key). -->
+    <record
+        id="config_parameter_maplibre_style_url"
+        model="ir.config_parameter"
+        forcecreate="True"
+    >
+        <field name="key">maplibre.style_url</field>
+        <field name="value">https://tiles.openfreemap.org/styles/liberty</field>
+    </record>
+    <!-- Optional API key, substituted for the {key} placeholder of the style URL.
+         Note: like any browser-side map key, it is visible to logged users. -->
+    <record
+        id="config_parameter_maplibre_api_key"
+        model="ir.config_parameter"
+        forcecreate="True"
+    >
+        <field name="key">maplibre.api_key</field>
+        <field name="value" />
+    </record>
+</odoo>
