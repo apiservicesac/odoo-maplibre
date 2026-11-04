@@ -19,7 +19,7 @@ Content:
   placeholder of the style URL (MapTiler, Stadia, ...).
 - Self-hosted vector tiles with `pmtiles://` sources.
     """,
-    "author": "API SERVICE S.A.C.",
+    "author": "API SERVICE S.A.C., Josue Salazar",
     "website": "https://www.apiservicesac.com",
     "license": "AGPL-3",
     "depends": ["base"],

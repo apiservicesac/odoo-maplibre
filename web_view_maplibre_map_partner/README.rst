@@ -90,11 +90,13 @@ Authors
 -------
 
 * API SERVICE S.A.C.
+* Josue Salazar
 
 Contributors
 ------------
 
 - API SERVICE S.A.C. (https://www.apiservicesac.com)
+- Josue Salazar (josuesp1620@gmail.com)
 
 Maintainers
 -----------

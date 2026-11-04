@@ -19,7 +19,7 @@ Content:
 - The whole world is displayed when no record has coordinates.
 - Map source configurable, see `web_maplibre_lib`.
     """,
-    "author": "API SERVICE S.A.C.",
+    "author": "API SERVICE S.A.C., Josue Salazar",
     "website": "https://www.apiservicesac.com",
     "license": "AGPL-3",
     "depends": ["base_geolocalize", "web_maplibre_lib"],

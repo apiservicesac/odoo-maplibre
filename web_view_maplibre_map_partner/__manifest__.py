@@ -16,7 +16,7 @@ Content:
   are displayed on the map, with clusters, popup and 3D buildings.
 - Demo data with partners that have coordinates.
     """,
-    "author": "API SERVICE S.A.C.",
+    "author": "API SERVICE S.A.C., Josue Salazar",
     "website": "https://www.apiservicesac.com",
     "license": "AGPL-3",
     "depends": ["web_view_maplibre_map", "contacts"],
