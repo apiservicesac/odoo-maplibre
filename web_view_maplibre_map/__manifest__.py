@@ -27,6 +27,9 @@ Content:
         "web.assets_backend": [
             "web_view_maplibre_map/static/src/views/maplibre_map/*",
         ],
+        "web.assets_unit_tests": [
+            "web_view_maplibre_map/static/tests/**/*",
+        ],
     },
     "installable": True,
     "auto_install": False,
