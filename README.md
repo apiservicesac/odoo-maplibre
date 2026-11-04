@@ -6,6 +6,7 @@ Maintained by API SERVICE SAC.
 | Module | Description |
 |---|---|
 | `web_maplibre_lib` | Bundles MapLibre GL JS 5.9.0 + PMTiles protocol, and the style configuration. |
+| `web_view_maplibre_map_partner` | MapLibre map view in Contacts. |
 | `web_view_maplibre_map` | New `maplibre_map` view: GeoJSON clustering, popups, search/filter integration. |
 
 ## Usage

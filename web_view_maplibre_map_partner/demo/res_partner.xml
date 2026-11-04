@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="base.res_partner_12" model="res.partner">
+        <field name="partner_latitude">35.82723</field>
+        <field name="partner_longitude">-90.69499</field>
+    </record>
+    <record id="base.res_partner_2" model="res.partner">
+        <field name="partner_latitude">38.64289</field>
+        <field name="partner_longitude">-79.33115</field>
+    </record>
+    <record id="base.res_partner_3" model="res.partner">
+        <field name="partner_latitude">27.94776</field>
+        <field name="partner_longitude">-82.45844</field>
+    </record>
+    <record id="base.res_partner_18" model="res.partner">
+        <field name="partner_latitude">35.60095</field>
+        <field name="partner_longitude">-82.55402</field>
+    </record>
+</odoo>
