@@ -65,9 +65,13 @@ MapLibre GL requires WebGL. Without it the view shows a message; use the Leaflet
 
 ## Status
 
-- Python tests pass on Odoo 19.0 (install + unit tests).
+- Python tests (15) and Hoot tests (5) pass on Odoo 19.0.
 - The map renders in Odoo 19 (manually verified). Without records with coordinates it shows the whole world; otherwise it fits the records.
-- Roadmap: marker images, partner integration (`web_view_maplibre_map_partner`), routing (OSRM/Valhalla), polygon layers, Odoo 20.0 port.
+- Roadmap: marker images, record list panel, style switcher, routing (OSRM/Valhalla), polygon layers, Odoo 20.0 port.
+
+## Upstream proposal
+
+These modules are proposed for inclusion in OCA/geospatial: [OCA/geospatial#494](https://github.com/OCA/geospatial/issues/494).
 
 ## Credits
 
