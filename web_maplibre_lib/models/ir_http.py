@@ -10,8 +10,8 @@ class IrHttp(models.AbstractModel):
             config = self.env["ir.config_parameter"].sudo()
             result.update(
                 {
-                    "maplibre.style_url": config.get_param("maplibre.style_url") or "",
-                    "maplibre.api_key": config.get_param("maplibre.api_key") or "",
+                    "maplibre.style_url": config.get_str("maplibre.style_url"),
+                    "maplibre.api_key": config.get_str("maplibre.api_key"),
                 }
             )
         return result

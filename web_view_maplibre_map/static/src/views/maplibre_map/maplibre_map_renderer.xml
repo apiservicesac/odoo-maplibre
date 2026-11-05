@@ -3,12 +3,12 @@
 
     <t t-name="web_view_maplibre_map.MapRenderer">
         <div class="o_maplibre_main_container h-100">
-            <div t-ref="mapContainer" class="o_maplibre_map_container h-100" />
+            <div t-ref="this.mapContainerRef" class="o_maplibre_map_container h-100" />
             <div
-                t-if="state.errorMessage"
+                t-if="this.state.errorMessage"
                 class="o_maplibre_error alert alert-warning m-3"
                 role="alert"
-                t-out="state.errorMessage"
+                t-out="this.state.errorMessage"
             />
         </div>
     </t>

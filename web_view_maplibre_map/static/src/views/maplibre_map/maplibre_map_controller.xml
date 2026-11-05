@@ -2,28 +2,28 @@
 <templates xml:space="preserve">
 
     <t t-name="web_view_maplibre_map.MapView">
-        <div class="h-100 d-flex flex-column" t-ref="root">
-            <Layout display="display" className="'flex-grow-1 d-flex flex-column'">
+        <div class="h-100 d-flex flex-column" t-ref="this.rootRef">
+            <Layout display="this.display" className="'flex-grow-1 d-flex flex-column'">
                 <t t-set-slot="control-panel-create-button">
                     <button
                         type="button"
                         class="btn btn-primary o_list_button_add"
                         data-hotkey="c"
-                        t-on-click="onClickCreate"
+                        t-on-click="this.onClickCreate"
                     >
                         New
                     </button>
                 </t>
                 <t t-set-slot="layout-actions">
-                    <SearchBar toggler="searchBarToggler" autofocus="firstLoad" />
+                    <SearchBar toggler="this.searchBarToggler" autofocus="this.firstLoad" />
                 </t>
                 <t t-set-slot="control-panel-navigation-additional">
                     <t
-                        t-component="searchBarToggler.component"
-                        t-props="searchBarToggler.props"
+                        t-component="this.searchBarToggler.component"
+                        t-props="this.searchBarToggler.props"
                     />
                 </t>
-                <MapRenderer t-props="props" />
+                <MapRenderer t-props="this.props" />
             </Layout>
         </div>
     </t>

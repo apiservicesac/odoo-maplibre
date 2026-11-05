@@ -1,6 +1,6 @@
 {
     "name": "MapLibre GL Javascript Library",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "API SERVICE SAC/MAPLIBRE",
     "summary": "MapLibre GL JS (vector tiles, WebGL) and PMTiles in the Odoo backend",
     "description": """

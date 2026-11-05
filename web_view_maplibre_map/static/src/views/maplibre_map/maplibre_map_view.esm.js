@@ -6,7 +6,7 @@ import {registry} from "@web/core/registry";
 export const maplibreMapView = {
     type: "maplibre_map",
     display_name: "MapLibre Map",
-    icon: "fa fa-map-o",
+    icon: "oi oi-view-map",
     multiRecord: true,
     Controller: MapController,
     Renderer: MapRenderer,

@@ -4,9 +4,12 @@ import {
     onWillStart,
     onWillUnmount,
     onWillUpdateProps,
-    useRef,
-    useState,
+    proxy,
+    signal,
+    t,
+    useProps,
 } from "@odoo/owl";
+import {standardViewProps} from "@web/views/standard_view_props";
 import {MaplibreMapDefaults} from "./maplibre_map_defaults.esm";
 import {_t} from "@web/core/l10n/translation";
 import {session} from "@web/session";
@@ -14,15 +17,21 @@ import {useService} from "@web/core/utils/hooks";
 
 /* global maplibregl */
 
+export const mapViewProps = {
+    ...standardViewProps,
+    Renderer: t.any().optional(),
+    archInfo: t.any(),
+};
+
 export class MapRenderer extends Component {
     static template = "web_view_maplibre_map.MapRenderer";
-    static props = ["*"];
+    props = useProps(mapViewProps);
+    mapContainerRef = signal.ref();
 
     setup() {
         this.orm = useService("orm");
         this.action = useService("action");
-        this.mapContainerRef = useRef("mapContainer");
-        this.state = useState({errorMessage: ""});
+        this.state = proxy({errorMessage: ""});
 
         this.viewConfig = this.props.archInfo;
         this.resModel = this.props.resModel;
@@ -137,7 +146,7 @@ export class MapRenderer extends Component {
             return;
         }
         this.map = new maplibregl.Map({
-            container: this.mapContainerRef.el,
+            container: this.mapContainerRef(),
             style: this.styleUrl,
             center: [this.initialCenter?.lng || 0, this.initialCenter?.lat || 0],
             zoom: this.viewConfig.defaultZoom,

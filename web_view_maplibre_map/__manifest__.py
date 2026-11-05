@@ -1,6 +1,6 @@
 {
     "name": "MapLibre Map View (vector tiles)",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "API SERVICE SAC/MAPLIBRE",
     "summary": "'maplibre_map' view: tilted WebGL map with vector tiles",
     "description": """
